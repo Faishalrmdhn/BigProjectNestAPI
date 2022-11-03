@@ -63,4 +63,14 @@ describe('Create Booking', function () {
         assert.isString(response.data.booking.bookingdates.checkout)
         assert.isString(response.data.booking.additionalneeds)
     });
+
+    describe('Partial Update Booking', function (){
+        it('Should successful updates a current booking', async () => {
+            const userId = getParams(data.USER_DETAIL['id'])
+            const response = await reqresApi.partialUpdateBooking(userId, data.PARTIAL_UPDATE_DATA);
+    
+            console.log(response.data);
+            assert.equal(response.status, 200);
+        })
+    })
 });
