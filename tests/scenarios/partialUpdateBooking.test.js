@@ -8,7 +8,7 @@ import { getParams } from '$helper/lib-api';
 chai.use(jsonSchema)
 
 describe('Partial Update Booking', function (){
-    it.only('Should successful updates a current booking', async () => {
+    it('Should successful updates a current booking', async () => {
         const userId = getParams(data.USER_DETAIL['id'])
         const response = await reqresAPI.partialUpdateBooking(userId, data.PARTIAL_UPDATE_DATA);
 
