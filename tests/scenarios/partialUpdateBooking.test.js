@@ -9,7 +9,7 @@ chai.use(jsonSchema)
 
 describe('Partial Update Booking', function (){
     it.only('Should successful updates a current booking', async () => {
-        const userId
+        
         const response = await reqresAPI.partialUpdate(data);
 
         assert.equal(response.status, 200);
