@@ -23,3 +23,8 @@ export const NEW_USER_DATA = {
         },
         "additionalneeds" : "Breakfast"
     }
+
+export const PARTIAL_UPDATE_DATA = {
+    "firstname" : "James",
+    "lastname" : "Brown"
+}
