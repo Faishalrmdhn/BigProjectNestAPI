@@ -6,11 +6,17 @@ dotenv.config()
 const BaseAPI = axios.create({
     baseURL: process.env.BASE_URL,
     headers:{
-        "Content-Type" : "application/json",
-        "Accept": "application/json"
+        "content-type" : "application/json",
+        "accept": "*/*"
     },
     validateStatus: function() {
         return true
+    },
+    
+    headers:{
+        "Content-Type" : "application/json",
+        "Accept": "application/json",
+        "Cookie": `token=${process.env.TOKEN_URL}`
     }
 })
 
