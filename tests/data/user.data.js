@@ -4,5 +4,9 @@ export const AUTH_USER = {
     }
 
 export const UPDATE_BOOKING = {
-    id: 2251
-}
+    id: 1
+    }
+
+export const HEALTH_CHECK ={
+
+    }

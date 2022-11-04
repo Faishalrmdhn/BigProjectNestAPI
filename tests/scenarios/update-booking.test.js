@@ -8,7 +8,7 @@ import * as schema from "$root/schema/update-booking.schema"
 chai.use(jsonSchema);
 
 describe('Update Booking', function () {
-    it.only('should successfully update user booking data', async () => {
+    it('should successfully update user booking data', async () => {
         const param = getParams(data.UPDATE_BOOKING['id']);
         const response = await reqresApi.update_booking(param);
         
