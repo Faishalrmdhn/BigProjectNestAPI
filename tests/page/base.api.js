@@ -7,7 +7,10 @@ const BaseAPI = axios.create({
     baseURL: process.env.BASE_URL,
     headers:{
         "content-type" : "application/json",
-        "accept": "*/*"
+        "accept": "*/*",
+        "Content-Type" : "application/json",
+        "Accept": "application/json",
+        "Cookie": `token=${process.env.TOKEN_URL}`
     },
     validateStatus: function() {
         return true
