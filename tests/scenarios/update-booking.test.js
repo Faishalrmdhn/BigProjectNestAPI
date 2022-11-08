@@ -9,8 +9,8 @@ chai.use(jsonSchema);
 
 describe('Update Booking', function () {
     it.only('should successfully update user booking data', async () => {
-        const param = getParams(data.UPDATE_BOOKING['id']);
-        const response = await reqresApi.update_booking(param);
+        const id = getParams(data.UPDATE_BOOKING['id']);
+        const response = await reqresApi.update_booking(id);
         
         assert.equal(response.status, 200);
         expect(response.data).to.be.jsonSchema(schema.VALID_SCHEMA)
