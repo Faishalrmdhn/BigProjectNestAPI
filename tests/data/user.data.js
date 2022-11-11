@@ -4,12 +4,16 @@ export const AUTH_USER = {
 }
 
 export const USER_DETAIL = {
-    "id" : 4728,
+    "id" : 5568,
     "firstname": "rama",
     "lastname": "faishal",
     "checkin": "2018-01-01",
     "checkout": "2019-01-01"
 
+}
+
+export const DELETE_USER_ID = {
+    "id" : 1755,
 }
 
 export const NEW_USER_DATA = {
