@@ -30,7 +30,6 @@ describe('Get Booking', function () {
     it('it should returns a specific booking based upon the booking id provided', async () => {
         const param = getParams(data.USER_DETAIL['id'])
         const response = await reqresApi.getBooking(param)
-        console.log(response.data)
 
         assert.equal(response.status, 200)
         assert.containsAllKeys(response.data, ['firstname', 'lastname', 'totalprice', 'depositpaid', 'bookingdates', 'additionalneeds' ])
