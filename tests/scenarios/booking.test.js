@@ -54,6 +54,15 @@ describe('Create Booking', function () {
     });
 });
 
+describe('Update Booking', function () {
+    it('should successfully update user booking data', async () => {
+        const userId = getParams(data.USER_DETAIL['id'])
+        const response = await reqresApi.update_booking(userId, data.UPDATE_BOOKING);
+        
+        assert.equal(response.status, 200);
+    });
+});
+
 describe('Partial Update Booking', function () {
     it('Should successful updates a current booking', async () => {
         const userId = getParams(data.USER_DETAIL['id'])
@@ -65,7 +74,7 @@ describe('Partial Update Booking', function () {
 
 describe('Delete Booking', function () {
     it('Should successful delete id booking', async () => {
-        const userId = getParams(data.USER_DETAIL['id'])
+        const userId = getParams(data.DELETE_USER_ID['id'])
         const response = await reqresApi.deleteBooking(userId);
 
         assert.equal(response.status, 201);
