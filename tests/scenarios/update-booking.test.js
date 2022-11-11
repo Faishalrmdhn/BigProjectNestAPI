@@ -8,11 +8,10 @@ import * as schema from "$root/schema/update-booking.schema"
 chai.use(jsonSchema);
 
 describe('Update Booking', function () {
-    it.only('should successfully update user booking data', async () => {
-        const id = getParams(data.UPDATE_BOOKING['id']);
-        const response = await reqresApi.update_booking(id);
+    it('should successfully update user booking data', async () => {
+        const userId = getParams(data.USER_DETAIL['id'])
+        const response = await reqresApi.update_booking(userId, data.UPDATE_BOOKING);
         
         assert.equal(response.status, 200);
-        expect(response.data).to.be.jsonSchema(schema.VALID_SCHEMA)
     });
 });
