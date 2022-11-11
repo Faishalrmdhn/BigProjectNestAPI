@@ -73,7 +73,7 @@ describe('Partial Update Booking', function () {
 });
 
 describe('Delete Booking', function () {
-    it('Should successful delete id booking', async () => {
+    it('Should success delete id booking', async () => {
         const userId = getParams(data.DELETE_USER_ID['id'])
         const response = await reqresApi.deleteBooking(userId);
 
