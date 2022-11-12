@@ -3,7 +3,7 @@ import jsonSchema from 'chai-json-schema'
 import reqresApi from '$root/page/reqres.api'
 import * as data from '$root/data/user.data'
 import {getParams} from '$root/helper/lib-api'
-// import * as schema from '$root/schema/list-user.schema';
+import * as schema from '$root/schema/token.schema';
 
 chai.use(jsonSchema)
 
@@ -13,6 +13,7 @@ describe('Create Token', function () {
 
         assert.equal(response.status, 200)
         assert.containsAllKeys(response.data, ['token'])
+        expect(response.data).to.be.jsonSchema(schema.token)
     });
 });
 

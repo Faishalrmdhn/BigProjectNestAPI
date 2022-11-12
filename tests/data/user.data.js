@@ -13,7 +13,7 @@ export const USER_DETAIL = {
 }
 
 export const DELETE_USER_ID = {
-    "id" : 3386,
+    "id" : 796,
 }
 
 export const NEW_USER_DATA = {
